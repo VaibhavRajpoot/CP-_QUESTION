@@ -1,3 +1,5 @@
+link -- https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1?page=1&difficulty[]=1&category[]=Arrays&curated[]=7&sortBy=submissions
+
 int minJumps(int arr[], int n){
         int c =0+arr[0];
         int max= c;
