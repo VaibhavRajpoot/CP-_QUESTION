@@ -1,1 +1,49 @@
+link -- https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1?page=1&difficulty[]=1&category[]=Arrays&curated[]=7&sortBy=submissions
 
+int minJumps(int arr[], int n){
+        int c =0+arr[0];
+        int max= c;
+        int b,flag;
+        int jump=0;
+        int value;
+        for(int i=0;i<n;i++)
+        {
+            if(n==1)
+            {
+                
+                break;
+            }
+            if(arr[0]==0)
+            {
+                flag=1;
+                break;
+            }
+            if(i<=c)
+            {
+                b=i+arr[i];
+                if(max<b)
+                {
+                    max=b;
+                    value=b-arr[i];
+                }
+            }
+            if(i==c || c>=n-1)
+            {
+                if(c>=n-1)
+                {
+                    jump++;
+                    break;
+                }
+                jump++;
+                c=value+arr[value];
+                if(i==c)
+                {
+                    flag=1;
+                    break;
+                } 
+            }   
+        }
+        if(flag==1)
+        return -1;
+        else 
+        return jump;
