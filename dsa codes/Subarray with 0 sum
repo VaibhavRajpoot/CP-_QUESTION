@@ -1,0 +1,23 @@
+link --- https://practice.geeksforgeeks.org/problems/subarray-with-0-sum-1587115621/1
+
+
+
+bool subArrayExists(int arr[], int n)
+    {
+        unordered_map<int,int> m;
+        int sum=0;
+        m[0]=1;
+        for(int i=0;i<n;i++)
+        {
+            sum=sum+arr[i];
+            
+            
+            if(m[sum])
+            return true;
+            else
+            m[sum]=1;
+                
+        }
+        return false;
+        //Your code here
+    }
